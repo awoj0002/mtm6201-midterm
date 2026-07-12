@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee House</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link"> Skip to main content</a>
     <!-- header section-->
      <header class="site-header">
         <div class="container">
-            <img src="/images/my-coffee-shop-logo.svg" alt="coffee house logo" class="logo">
+            <img srcset="images/my-coffee-shop-logo.svg" alt="coffee house logo" class="logo">
             <nav class="main-nav">
-                <a href="#">About</a>
+                <a href="#" aria current="page">About</a>
                 <a href="#">Menu</a>
                 <a href="#">Locations</a>
             </nav>
@@ -21,13 +23,24 @@
 
      <!-- hero section-->
       <section>
-        <div class="hero-overlay"></div>
+        <img 
+        srcset="images/hero-background-400.webp 400w,
+        images/hero-background-800.webp 800w,
+        images/hero-background-1200.webp 1200w,
+        images/hero-background-1920.webp 1920w"
+        alt="barista smiling while serving coffee"
+        sizes="100vw"
+        src="images/hero-background.jpg"
+        aria-hidden="true"
+        >
+        
+        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
             
             <h1>Experience Coffee Like Never Before</h1>
             <p>We craft more than beverages; we curate memories, one flavourful moment at a time. Embrace the aroma and let every visit be a chapter in your coffee story.</p>
             <div class="btn-container">
-                <a href="#" class="btn">Explore our menu</a>
+                <a href="#" class="btn btn--primary">Explore our menu</a>
             </div>
         </div>
       </section>
@@ -38,11 +51,11 @@
             <h2 class="section-title">welcome to our coffee house</h2>
             <h1 class="section-subtitle">Experience a new way to taste</h1>
             <div class="gallery-grid" id="gallery-images">
-                <img src="/images/gallery1.jpg" alt="Gallery Image 1">
-                <img src="/images/gallery2.jpg" alt="Gallery Image 2">
-                <img src="/images/gallery3.jpg" alt="Gallery Image 3">
-                <img src="/images/gallery3.jpg" alt="Gallery Image 4">
-                <img src="/images/gallery3.jpg" alt="Gallery Image 5">
+                <img src="/images/latte.jpeg" alt="latte coffee with creamer">
+                <img src="/images/coffee-beans.jpeg" alt="coffee beans in a cup">
+                <img src="/images/three-cups.jpeg" alt="three cups of latte being held individually">
+                <img src="/images/pouring-coffee.jpeg" alt="coffee being poured into a cup">
+                <img src="/images/smiling-employee.jpeg" alt="smiling employee">
             </div>
         </div>
       </section>
@@ -53,20 +66,20 @@
             <h2 class="section-title">what we offer</h2>
             <h1 class="section-subtitle">why visit us?</h1>
         </div>
-        <div class="fair-trade">
-            <img src="coffee.jpg" alt="Fresh fair trade coffee beans" width="300" height="200">
+        <div class="services">
+            <img src="fairtrade.svg" width="300" height="200">
             <h3>Fair Trade Coffee</h3>
             <p>We build direct relationships with the farmers and producers who help in the development of delicious, sustainable and organic coffee.</p>
         </div>
 
-        <div class="baked-goods">
-            <img src="coffee.jpg" alt="Fresh fair trade coffee beans" width="300" height="200">
+        <div class="services">
+            <img src="local-baked-goods.svg" width="300" height="200">
             <h3>Local Baked Goods</h3>
             <p>We use local products to bake our goods and bring in a variety of treats from local bakers with our community.</p>
         </div>
 
-        <div class="with-love">
-            <img src="coffee.jpg" alt="Fresh fair trade coffee beans" width="300" height="200">
+        <div class="services">
+            <img src="made-with-love.svg" width="300" height="200">
             <h3>Made With Love</h3>
             <p>we value our customers and make it our priority to serve everyone with respect and a friendly smile to start their day off right.</p>
         </div>
@@ -77,13 +90,13 @@
         <div class="primary-menu">
             <h2 class="section-title">Our Menu</h2>
             <h1 class="section-subtitle">Explore what we have to offer you</h1>
-            <a href="#explore" class="btn-primary">EXPLORE OUR MENU</a>
+            <a href="#" class="btn btn--primary">EXPLORE OUR MENU</a>
         </div>
 
         <div class="secondary-menu">
             <h2 class="section-title">Loactions</h2>
             <h1 class="section-subtitle">Find your nearest coffee shop</h1>
-            <a href="#locations" class="btn-primary">VIEW LOCATIONS</a>
+            <a href="#" class="btn-transparent">VIEW LOCATIONS</a>
         </div>
       </section>
 
@@ -99,7 +112,7 @@
             <p>In the heart of our community, My Coffee House emerged as a humble local coffee shop that sought to redefine the coffee experience. Founded with a passion for quality brews and a commitment to fostering genuine connections, we embarked on this journey with a vision to create a warm and inviting space for coffee enthusiasts and casual patrons alike. 
             
             My Coffee House quickly became a cherished gathering spot, where the rich aroma of freshly ground coffee beans mingled with the laughter of friends and the tapping of keyboards from those seeking a cozy workspace.</p>
-            <a href="#" class="btn">LEARN MORE</a>
+            <a href="#" class="btn" id="btn-fill">LEARN MORE</a>
         </div>
 
        </section>
@@ -108,21 +121,24 @@
         <section class="testimonial-container">
             <div class="testimonial-header">
                 <h2 class="section-title">Testimonials</h2>
-                <h1 class="section-subtitle">What OUR CUSTOMER SAY ABOUT US</h1>
+                <h1 class="section-subtitle">WHAT OUR CUSTOMER SAY ABOUT US</h1>
             </div>
 
             <div class="testimonial-grid">
-                <article>
+                <article class="testimonial-1" img src="/images/testimonial-1.jpeg" alt="image of a happy customer drinking coffee" class="">
+                    <!-- <img src="/images/testimonial-1.jpeg" alt="image of a happy customer drinking coffee" class=""> -->
                     <p>"I always make a point to visit My Coffee House when in Ottawa. Delicious coffee and friendly service."</p>
                     <h4>JANE D., TORONTO</h4>
                 </article>
 
-                <article>
+                <article class="testimonial-2" img src="/images/testimonial-2.jpeg" alt="image of a happy customer working on a laptop" class="">
+                    <!-- <img src="/images/testimonial-2.jpeg" alt="image of a happy customer working on a laptop" class=""> -->
                     <p>"Great atmosphere to get some work done while enjoying a cup or two of incredible coffee."</p>
                     <h4>Scott S., Ottawa</h4>
                 </article>
 
-                <article>
+                <article class="testimonial-3" img src="/images/testimonial-3.jpeg" alt="image of a happy customer working on a laptip and drinking coffee" class="">
+                    <!-- <img src="/images/testimonial-3.jpeg" alt="image of a happy customer working on a laptip and drinking coffee" class=""> -->
                     <p>"Best coffee in Ottawa and the service is top notch. Would highly recommend a visit."</p>
                     <h4>Susie F., Ottawa </h4>
                 </article>
